@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tez Yordam Xizmati - Mehmonxona</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="hero">
+            <h1> DreamNest Mehmonxona Tez Yordam Xizmati</h1>
+            <p>Favqulodda holatlarda biz sizga yordam beramiz!</p>
+            <a href="{{ url_for('emergency') }}" class="emergency-button">Tez Yordam Chaqirish</a>
+        </div>
+    </header>
+
+    <!-- Flash xabarlar -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-message">
+        {% for category, message in messages %}
+        <p class="{{ category }}">{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- Ma'lumot -->
+    <section class="info">
+        <h2>Xavfsizligingiz Biz Uchun Muhim</h2>
+        <p>Bizning tez yordam xizmatimiz mehmonxonamizdagi har bir mehmon uchun 24/7 ishlaydi. Favqulodda holatda yuqoridagi tugmani bosing va formani to‘ldiring. Bizning jamoamiz darhol yordamga keladi.</p>
+        <img src="{{ url_for('static', filename='images/logotip.jpg') }}" 
+             alt="Tez Yordam" 
+             class="info-image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© DreamNest Mehmonxona. Xavfsiz va qulay dam olish!</p>
+    </footer>
+</body>
+</html>

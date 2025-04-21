@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --gold: #FFD700; /* Tilla rang */
+    --dark-blue: #000066; /* Baland ko'k */
+    --darker-blue: #000066; /* Footer uchun */
+}
+
+body {
+    background: var(--dark-blue);
+    color: var(--gold);
+    line-height: 1.6;
+}
+
+/* Yaltirash effekti */
+@keyframes shine {
+    0% { text-shadow: 0 0 5px var(--gold), 0 0 10px #FFA500; }
+    50% { text-shadow: 0 0 10px var(--gold), 0 0 20px #FFA500; }
+    100% { text-shadow: 0 0 5px var(--gold), 0 0 10px #FFA500; }
+}
+
+h1, h2, p, label {
+    background: linear-gradient(45deg, var(--gold), #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 2s infinite;
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/static/images/emergency.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+/* Tugmalar */
+.emergency-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #dc3545; /* Qizil */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.emergency-button:hover {
+    background: #c82333;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--gold); /* Tilla fon */
+    color: var(--dark-blue); /* Ko'k yozuv */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #FFA500;
+}
+
+/* Flash xabarlar */
+.flash-message {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.flash-message .success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+/* Ma'lumot bo'limi */
+.info {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.info-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: block;
+    border: 2px solid var(--gold); /* Tilla chegara */
+}
+
+/* Forma */
+.emergency-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white; /* Oq fon */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.emergency-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.emergency-form input,
+.emergency-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gold); /* Tilla chegara */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background: #f0f0f0; /* Engil kulrang */
+    color: var(--dark-blue);
+}
+
+.emergency-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.emergency-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+.emergency-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 5px;
+    border: 2px solid var(--gold); /* Tilla chegara */
+}
+
+/* Footer */
+footer {
+    background: var(--darker-blue);
+    color: var(--gold);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    background: linear-gradient(45deg, var(--gold), #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 2s infinite;
+}
+
+/* Mobil moslashuv */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .emergency-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .info-image {
+        max-width: 300px;
+    }
+    .emergency-form {
+        margin: 20px;
+        padding: 15px;
+    }
+}

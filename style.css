@@ -6,50 +6,65 @@
 }
 
 body {
-    background: #d7ebfd;
+    background: #f8f9fa;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Header */
 header {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/images/gym.jpg');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/static/images/emergency.jpg');
     background-size: cover;
     background-position: center;
-    color: rgb(253, 253, 253);
+    color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
 
-.cta-button {
+.emergency-button {
     display: inline-block;
-    padding: 12px 24px;
-    background: #021931;
-    color: rgb(253, 253, 253);
+    padding: 12px 30px;
+    background: #dc3545;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background 0.3s ease;
 }
 
-.cta-button:hover {
-    background: #218838;
+.emergency-button:hover {
+    background: #c82333;
 }
 
-/* Flash xabarlar */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
 .flash-message {
-    max-width: 500px;
+    max-width: 600px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     border-radius: 5px;
 }
@@ -59,148 +74,80 @@ header {
     color: #155724;
     padding: 10px;
     border: 1px solid #c3e6cb;
+    border-radius: 5px;
 }
 
-/* Sport kartochkalari */
-.sports {
-    max-width: 1200px;
+.info {
+    max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
     text-align: center;
 }
 
-.sports h2 {
+.info h2 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.sport-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+.info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-.sport-card {
-    background: rgb(239, 252, 123);
+.info-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.sport-card:hover {
-    transform: translateY(-5px);
-}
-
-.sport-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.sport-card h3 {
-    font-size: 1.4rem;
-    margin: 10px 0;
-}
-
-.sport-card p {
-    font-size: 0.9rem;
-    color: #666;
-    padding: 0 15px;
-    margin-bottom: 15px;
-}
-
-.card-button {
     display: block;
-    margin: 15px;
-    padding: 10px;
-    background: #021931;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background 0.3s;
 }
 
-.card-button:hover {
-    background: #021931;
-}
-
-.types-button {
-    background: #021931;
-}
-
-.types-button:hover {
-    background: #021931;
-}
-
-/* Mashqlar gridi */
-.exercise-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    padding: 15px;
-}
-
-.exercise-item {
-    text-align: center;
-}
-
-.exercise-image {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.exercise-item p {
-    font-size: 0.8rem;
-    margin-top: 5px;
-}
-
-/* Bandlov formasi */
-.booking-form {
+.emergency-form {
     max-width: 500px;
     margin: 40px auto;
     padding: 20px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.booking-form label {
+.emergency-form label {
     display: block;
     margin: 10px 0 5px;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
-.booking-form input,
-.booking-form select {
+.emergency-form input,
+.emergency-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
+    font-size: 1rem;
 }
 
-.booking-form button {
+.emergency-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.emergency-form button {
     width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
 }
 
-.back-button {
-    display: inline-block;
-    margin: 15px;
-    padding: 10px;
-    color:#021931;
-    text-decoration: none;
-    text-align: center;
+.emergency-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 5px;
 }
 
-.back-button:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
 footer {
     background: #343a40;
     color: white;
@@ -209,15 +156,26 @@ footer {
     margin-top: 40px;
 }
 
-/* Mobil moslashuv */
+footer p {
+    font-size: 0.9rem;
+}
+
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
-    .sport-image {
-        height: 150px;
+    .hero p {
+        font-size: 1rem;
     }
-    .exercise-image {
-        height: 100px;
+    .emergency-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .info-image {
+        max-width: 300px;
+    }
+    .emergency-form {
+        margin: 20px;
+        padding: 15px;
     }
 }

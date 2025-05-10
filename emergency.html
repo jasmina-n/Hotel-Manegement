@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tez Yordam So‘rovi - Mehmonxona</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Tez Yordam So‘rovi</h1>
+            <p>Quyidagi formani to‘ldiring, biz darhol yordam beramiz.</p>
+        </div>
+    </header>
+
+    <section class="emergency-form">
+        <img src="{{ url_for('static', filename='images/logotip.jpg') }}" 
+             alt="Tez Yordam" 
+             class="emergency-image">
+        <form method="POST" action="{{ url_for('emergency') }}">
+            <label for="name">Ismingiz</label>
+            <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+
+            <label for="room">Xona Raqami</label>
+            <input type="text" id="room" name="room" placeholder="Xona raqamingiz" required>
+
+            <label for="issue">Muammo Tavsifi</label>
+            <textarea id="issue" name="issue" placeholder="Muammoni qisqacha tasvirlang..." required></textarea>
+
+            <button type="submit" class="emergency-button">Yuborish</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="back-button">Orqaga</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Mehmonxona. Xavfsiz va qulay dam olish!</p>
+    </footer>
+</body>
+</html>
